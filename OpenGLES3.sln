@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Triangle", "Hello_Triangle\Hello_Triangle.vcxproj", "{D22C8DE1-5196-4311-A747-3AC44C280365}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64379A2A-1FBF-4ED2-8C66-B6394F74AF97} = {64379A2A-1FBF-4ED2-8C66-B6394F74AF97}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcxproj", "{64379A2A-1FBF-4ED2-8C66-B6394F74AF97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D22C8DE1-5196-4311-A747-3AC44C280365}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D22C8DE1-5196-4311-A747-3AC44C280365}.Debug|Win32.Build.0 = Debug|Win32
+		{D22C8DE1-5196-4311-A747-3AC44C280365}.Release|Win32.ActiveCfg = Release|Win32
+		{D22C8DE1-5196-4311-A747-3AC44C280365}.Release|Win32.Build.0 = Release|Win32
+		{64379A2A-1FBF-4ED2-8C66-B6394F74AF97}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64379A2A-1FBF-4ED2-8C66-B6394F74AF97}.Debug|Win32.Build.0 = Debug|Win32
+		{64379A2A-1FBF-4ED2-8C66-B6394F74AF97}.Release|Win32.ActiveCfg = Release|Win32
+		{64379A2A-1FBF-4ED2-8C66-B6394F74AF97}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
