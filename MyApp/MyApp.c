@@ -119,11 +119,39 @@ void Shutdown(ESContext *esContext)
 
 
 int esMain(ESContext *esContext) {
+	EGLTest();
 	esContext->userData = malloc(sizeof(UserData));
 	esCreateWindow(esContext, "Hello Triangle", 320, 240, ES_WINDOW_RGB);
 	if (!Init(esContext)) return GL_FALSE;
 	esRegisterShutdownFunc(esContext, Shutdown);
 	esRegisterDrawFunc(esContext, Draw);
 	return GL_TRUE;
+}
+
+int EGLTest() {
+	EGLint majorVersion;
+	EGLint minorVersion;
+	EGLDisplay display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+	if (display == EGL_NO_DISPLAY) {
+		return -1; 
+	} 
+
+	if (!eglInitialize(display, &majorVersion, &minorVersion)){
+		return -1;
+	}
+	printf("majorVersion = %d\n", majorVersion);
+	printf("minorVersion = %d\n", minorVersion);
+	
+	
+	EGLint numConfigs = 0;
+	EGLint res = eglGetConfigs(display,NULL, 0, &numConfigs);
+	printf("res = %d\n", res);
+	printf("numConfigs = %d\n", numConfigs);
+	EGLConfig *eglConfigs = malloc(sizeof(EGLConfig) * numConfigs);
+	EGLint maxReturnConfigs = numConfigs;
+	 res = eglGetConfigs(display, eglConfigs, maxReturnConfigs, &numConfigs);
+	 free(eglConfigs);
+	 eglConfigs = NULL;
+	return 0;
 }
 
